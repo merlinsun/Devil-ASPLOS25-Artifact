@@ -1,22 +1,54 @@
-Welcome to Lumache's documentation!
+Welcome to DeVil ASPLOS'25 Artifact!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Prerequisites
+---------------
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+.. The full evaluation of this artifact is resource-intensive. 
+We recommand to run the full evaluation on a machine with at least 16 cores, 32GB memory, and 45GB disk space 
+for a reasonable evaluation time (~10h).
+
+Getting started
+---------------
+
+First, download the artifact from here `Artifact <https://doi.org/10.5281/zenodo.14053328>`_ , then untar the artifact(~10min):
+
+.. code-block:: console
+
+  $ tar -xvf artifact_asplos25_devil.tar.gz
+
+Then, enter the docker container:
+
+
+.. code-block:: console
+
+  $ cd /path/to/the/artifact/
+  $ docker load -i image_artifact_asplos25_devil.tar  # takes ~10min
+..   $ ./start-container.py
+
+Then, execute the following command **in the container**:
+
+.. code-block:: console
+
+  $ ...
 
 .. note::
 
-   This project is under active development.
+   The expected exeuction time should be less than 10 mins.
+
+.. If you see **Kick-the-tire passed!**, you are all set to go.
+
+
+Next step
+----------
+
+For full evaluation, please go to :doc:`/evaluation`
 
 Contents
 --------
 
 .. toctree::
 
-   usage
-   api
+   evaluation
+   .. generate-ub
+   .. ubgen

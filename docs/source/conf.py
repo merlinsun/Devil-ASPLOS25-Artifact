@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
+project = 'DeVil-Artifact'
+copyright = '2024, Yibiao Yang'
 author = 'Graziella'
 
 release = '0.1'
