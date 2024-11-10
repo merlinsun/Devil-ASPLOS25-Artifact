@@ -26,6 +26,7 @@ Then, enter the docker container:
   $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil <imported image> /bin/bash
 ..   $ ./start-container.py
 
+Here, <imported image> is the image name or id you get from the previous command.
 .. Then, execute the following command **in the container**:
 
 .. .. code-block:: console
