@@ -5,7 +5,7 @@ Prerequisites
 ---------------
 
 .. The full evaluation of this artifact is resource-intensive. 
-We recommand to run the full evaluation on a machine with at least 16 cores, 32GB memory, and 20GB disk space 
+We recommand to run the full evaluation on a machine with at least 16 cores, 32GB memory, and 50GB disk space 
 for a reasonable evaluation time (~2h).
 
 Getting started
