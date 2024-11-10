@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DeVil-Artifact'
-copyright = '2024, Yibiao Yang'
+copyright = '2024, Yibiao Yang and Maolin Sun'
 author = 'Graziella'
 
 release = '0.1'
