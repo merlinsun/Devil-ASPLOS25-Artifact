@@ -12,6 +12,11 @@ Evaluation
 
    All the following code are executed in the docker container.
 
+You can use the following command to enter the container:
+
+.. code-block:: console
+
+   $ docker exec -it devil /bin/bash
 
 
 Once inside the container, navigate to the appropriate directory and execute the following commands:
@@ -24,5 +29,7 @@ Once inside the container, navigate to the appropriate directory and execute the
    $ python3 main.py -s /home/gcc-12.1.0/gcc/testsuite/ -c clang -d lldb -p
    $ python3 dataAna.py
 
+
+Then, you can check the results in the ``/home/devil`` directory.
 
     
