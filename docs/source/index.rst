@@ -5,8 +5,8 @@ Prerequisites
 ---------------
 
 .. The full evaluation of this artifact is resource-intensive. 
-We recommand to run the full evaluation on a machine with at least 16 cores, 32GB memory, and 45GB disk space 
-for a reasonable evaluation time (~10h).
+We recommand to run the full evaluation on a machine with at least 16 cores, 32GB memory, and 20GB disk space 
+for a reasonable evaluation time (~2h).
 
 Getting started
 ---------------
@@ -15,26 +15,26 @@ First, download the artifact from here `Artifact <https://doi.org/10.5281/zenodo
 
 .. code-block:: console
 
-  $ tar -xvf artifact_asplos25_devil.tar.gz
+  $ gunzip -c devil.tar.gz > devil.tar
+  $ cat devil.tar | docker import - devil  # takes ~10min
 
 Then, enter the docker container:
 
 
 .. code-block:: console
 
-  $ cd /path/to/the/artifact/
-  $ docker load -i image_artifact_asplos25_devil.tar  # takes ~10min
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil <imported image> /bin/bash
 ..   $ ./start-container.py
 
-Then, execute the following command **in the container**:
+.. Then, execute the following command **in the container**:
 
-.. code-block:: console
+.. .. code-block:: console
 
-  $ ...
+..   $ ...
 
-.. note::
+.. .. note::
 
-   The expected exeuction time should be less than 10 mins.
+..    The expected exeuction time should be less than 10 mins.
 
 .. If you see **Kick-the-tire passed!**, you are all set to go.
 
@@ -42,7 +42,9 @@ Then, execute the following command **in the container**:
 Next step
 ----------
 
-For full evaluation, please go to :doc:`/evaluation`
+Then, you can reproduce the results in the paper by following the instructions described as :doc:`/evaluation` **in the container**.  
+
+.. For full evaluation, please go to :doc:`/evaluation`
 
 Contents
 --------
