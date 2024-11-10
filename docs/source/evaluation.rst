@@ -30,6 +30,6 @@ Once inside the container, navigate to the appropriate directory and execute the
    $ python3 dataAna.py
 
 
-Then, you can check the results in the ``/home/devil`` directory.
+You can then check the results shown in the terminal, which correspond to Tables 6 and 7 in the paper.
 
     
