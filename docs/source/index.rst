@@ -18,15 +18,15 @@ First, download the artifact from here `Artifact <https://doi.org/10.5281/zenodo
   $ gunzip -c devil.tar.gz > devil.tar
   $ cat devil.tar | docker import - devil  # takes ~10min
 
-Then, enter the docker container:
+Then, execute the following command to start the container:
 
 
 .. code-block:: console
 
-  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil <imported image> /bin/bash
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil devil /bin/bash
 ..   $ ./start-container.py
 
-Here, `<imported image>` is the image name or id you get from the previous command.
+.. Here, `<imported image>` is the image name or id you get from the previous command.
 
 
 .. .. code-block:: console
