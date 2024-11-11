@@ -1,76 +1,68 @@
-Welcome to DeVil ASPLOS'25 Artifact!
-===================================
+Welcome to the DeVil ASPLOS'25 Artifact!
+=========================================
+
+Thank you for your interest in DeVil! 
+This document will guide you through the prerequisites and steps needed to set up and reproduce the results described in our ASPLOS'25 paper. 
+Please feel free to reach out if you encounter any issues or have feedback.
 
 Prerequisites
+--------------
+
+For optimal performance and reasonable evaluation time (approximately 2 hours), we recommend running the full evaluation on a machine with the following specifications:
+
+- **CPU**: 16 cores or more
+- **Memory**: At least 32 GB
+- **Disk Space**: 20 GB free
+
+These requirements will ensure a smooth experience and allow the evaluation to complete within the expected timeframe.
+
+Getting Started
 ---------------
 
-.. The full evaluation of this artifact is resource-intensive. 
-We recommand to run the full evaluation on a machine with at least 16 cores, 32GB memory, and 50GB disk space 
-for a reasonable evaluation time (~2h).
-
-Getting started
----------------
-
-First, download the artifact from here `Artifact <https://doi.org/10.5281/zenodo.14053328>`_ , then untar the artifact(~10min):
+To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.14053328>`_]. Once downloaded, extract the artifact archive, which may take around 10 minutes:
 
 .. code-block:: console
 
   $ gunzip -c devil.tar.gz > devil.tar
-  $ cat devil.tar | docker import - devil  # takes ~10min
+  $ cat devil.tar | docker import - devil  # ~10 minutes
 
-Or you can pull the image from dockerhub:
+Alternatively, you can pull the DeVil Docker image directly from Docker Hub:
 
 .. code-block:: console
 
   $ docker pull merlin07/devil:latest
 
-Then, execute the following command to start the container:
+Starting the Container
+----------------------
 
+Once you have either imported or pulled the image, please use the following commands to start the container. This setup will grant the container the necessary permissions to run the evaluation smoothly.
 
-.. code-block:: console
-
-  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil <imported image> /bin/bash
-..   $ ./start-container.py
-
-Here, `<imported image>` is the image name or id you get from the previous command.
-
-If you download the artifact from Zenodo, you can use the following command to start the container:
+**If you downloaded the artifact from Zenodo:**
 
 .. code-block:: console
 
-  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil devil /bin/bash
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined --name devil devil /bin/bash
 
-If you pull the image from dockerhub, you can use the following command to start the container:
+**If you pulled the image from Docker Hub:**
 
 .. code-block:: console
 
-  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil merlin07/devil:latest /bin/bash
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined --name devil merlin07/devil:latest /bin/bash
 
+.. **Note:** Replace `<imported image>` in the above commands with the image name or ID from the previous command, if applicable.
 
-
-.. .. code-block:: console
-
-..   $ ...
-
-.. .. note::
-
-..    The expected exeuction time should be less than 10 mins.
-
-.. If you see **Kick-the-tire passed!**, you are all set to go.
-
-
-Next step
+Next Steps
 ----------
 
-Then, you can reproduce the results in the paper by following the instructions described as :doc:`/evaluation` **in the container**.  
-
-.. For full evaluation, please go to :doc:`/evaluation`
+Once the container is up and running, you can follow the detailed instructions provided in the :doc:`/evaluation` section within the container. These instructions will guide you through reproducing the results presented in our ASPLOS'25 paper.
 
 Contents
 --------
 
+Below is an outline of the content provided for this artifact:
+
 .. toctree::
 
    evaluation
-   .. generate-ub
-   .. ubgen
+   bug-report
+
