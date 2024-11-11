@@ -5,7 +5,7 @@ This document provides an overview of the bugs identified.
 Each entry links to the corresponding bug tracking page for more detailed information.
 
 =================  =======  
-    Tool           Bug ID      
+    Debugger           Bug ID      
 =================  =======  
 GDB                `25350 <https://sourceware.org/bugzilla/show_bug.cgi?id=25350>`_         
 GDB                `25405 <https://sourceware.org/bugzilla/show_bug.cgi?id=25405>`_         
@@ -35,3 +35,7 @@ LLDB               `48381 <https://bugs.llvm.org/show_bug.cgi?id=48381>`_
 LLDB               `48382 <https://bugs.llvm.org/show_bug.cgi?id=48382>`_                   
 LLDB               `55744 <https://github.com/llvm/llvm-project/issues/55744>`_             
 =================  ======= 
+
+
+These bug reports correspond to Table 1 in our ASPLOS'25 paper. 
+Additionally, Tables 2, 3, 4, 5, and Figure 4 in the paper are based on a manual analysis of the identified bugs.
