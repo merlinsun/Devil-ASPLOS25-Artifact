@@ -18,15 +18,34 @@ First, download the artifact from here `Artifact <https://doi.org/10.5281/zenodo
   $ gunzip -c devil.tar.gz > devil.tar
   $ cat devil.tar | docker import - devil  # takes ~10min
 
+Or you can pull the image from dockerhub:
+
+.. code-block:: console
+
+  $ docker pull merlin07/devil:latest
+
 Then, execute the following command to start the container:
 
 
 .. code-block:: console
 
-  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil devil /bin/bash
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil <imported image> /bin/bash
 ..   $ ./start-container.py
 
-.. Here, `<imported image>` is the image name or id you get from the previous command.
+Here, `<imported image>` is the image name or id you get from the previous command.
+
+If you download the artifact from Zenodo, you can use the following command to start the container:
+
+.. code-block:: console
+
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil devil /bin/bash
+
+If you pull the image from dockerhub, you can use the following command to start the container:
+
+.. code-block:: console
+
+  $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined  --name devil merlin07/devil:latest /bin/bash
+
 
 
 .. .. code-block:: console
