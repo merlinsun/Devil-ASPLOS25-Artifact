@@ -27,7 +27,6 @@ Once inside the container, navigate to the appropriate directory and execute the
    $ cd /home/devil
    $ python3 main.py -s /home/gcc-12.1.0/gcc/testsuite/ -c gcc -d gdb -p
    $ python3 main.py -s /home/gcc-12.1.0/gcc/testsuite/ -c clang -d lldb -p
-   $ python3 dataAna.py
 
 
 If you wish to prevent the execution from being interrupted upon closing the terminal, you can use the following command:
