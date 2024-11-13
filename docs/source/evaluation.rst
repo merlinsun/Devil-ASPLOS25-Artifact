@@ -50,4 +50,6 @@ Once the execution traces at source-level and instruction-level stepping are col
 
 You can then check the results shown in the terminal, which correspond to Tables 6 and 7 in the paper.
 
-    
+.. note::
+   
+   The reproduced results may vary slightly from those in the paper due to differences in machine configurations. However, the relative relationships should remain consistent.
