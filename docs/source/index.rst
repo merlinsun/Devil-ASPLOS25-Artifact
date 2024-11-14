@@ -16,7 +16,7 @@ For optimal performance and reasonable evaluation time (approximately 2 hours), 
 
 These requirements will ensure a smooth experience and allow the evaluation to complete within the expected timeframe.
 
-Getting Started
+Getting Started (Kick-the-tire)
 ---------------
 
 To begin, please download the artifact from Zenodo using this link: [`Artifact <https://doi.org/10.5281/zenodo.14053328>`_]. Once downloaded, extract the artifact archive, which may take around 10 minutes:
@@ -49,7 +49,10 @@ Once you have either imported or pulled the image, please use the following comm
 
   $ docker run -itd --privileged --cap-add sys_ptrace --security-opt seccomp=unconfined --name devil merlin07/devil:latest /bin/bash
 
-.. **Note:** Replace `<imported image>` in the above commands with the image name or ID from the previous command, if applicable.
+.. note::
+
+  When the container starts successfully, a long hash string will appear on the terminal, indicating that the **Kick-the-tire** setup is complete.
+  
 
 Next Steps
 ----------
